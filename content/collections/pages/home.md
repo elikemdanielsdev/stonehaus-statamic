@@ -4,103 +4,134 @@ blueprint: pages
 title: Home
 template: home
 updated_by: 79d6af5a-902a-414e-a900-fe751ede6345
-updated_at: 1739912569
+updated_at: 1739921022
 content:
   -
     type: paragraph
     content:
       -
         type: text
-        text: 'Use this '
+        text: 'A federal judge declined on Tuesday to temporarily block Elon Musk and his Department of Government Efficiency from accessing federal data systems at a slew of executive branch agencies.'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'The '
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://s3.documentcloud.org/documents/25538512/ruling-in-doge-case.pdf'
+              rel: null
+              target: _blank
+              title: null
+        text: 'decision by US District Judge Tanya Chutkan'
+      -
+        type: text
+        text: ' is an early blow to efforts by a group of Democratic state attorneys general to hamstring Musk and DOGE as they undertake efforts to upend the federal workforce.'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'The attorneys general sued Musk last week, arguing that his role in the government is a violation of the Constitution’s Appointments Clause, which gives presidents the power to appoint officials who must then be confirmed by the Senate.'
+  -
+    type: paragraph
+    content:
       -
         type: text
         marks:
           -
             type: bold
-        text: extension
+        text: 'Bold text example:'
       -
         type: text
-        text: ' to '
+        text: ' This is an example of '
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: 'bold text'
+      -
+        type: text
+        text: ' in the lorem ipsum.'
+  -
+    type: paragraph
+    content:
       -
         type: text
         marks:
           -
             type: italic
-        text: render
+        text: 'Italic text example:'
       -
         type: text
-        text: ' text underlined. If you pass <u> tags, or text with inline style attributes setting text-decoration: underline in the editor’s initial content, they all will be '
-      -
-        type: text
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'https://google.com'
-              rel: null
-              target: _blank
-              title: Google
-        text: rendered
-      -
-        type: text
-        text: ' accordingly. This '
+        text: ' This is an example of '
       -
         type: text
         marks:
           -
-            type: link
-            attrs:
-              href: 'https://cnn.com'
-              rel: null
-              target: _blank
-              title: CNN
-          -
-            type: bold
-        text: sentence
+            type: italic
+        text: 'italic text'
       -
         type: text
-        text: ' contains an inline code: '
-      -
-        type: text
-        marks:
-          -
-            type: code
-        text: 'console.log(‘Hello, Africa‘)'
-      -
-        type: text
-        text: ' '
-  -
-    type: set
-    attrs:
-      id: m7avr8tw
-      values:
-        type: announcement
-        content: 'This is a short announcement to all those in Accra.'
-  -
-    type: set
-    attrs:
-      id: m7ayzs6q
-      values:
-        type: info
-        title: 'Info title'
-        content: 'A short sentence about this set.'
-        image: pages/ryan-klaus-xa0bloxvxrq-unsplash(1).jpg
-  -
-    type: set
-    attrs:
-      id: m7ahhmvk
-      values:
-        type: message
-        title: 'Just a message title'
-        content: 'I know the message could be so long.'
+        text: ' in the lorem ipsum.'
   -
     type: paragraph
     content:
       -
-        type: image
-        attrs:
-          src: 'asset::assets::pages/ryan-klaus-xa0bloxvxrq-unsplash(1).jpg'
-          alt: 'Simple image'
+        type: text
+        marks:
+          -
+            type: bold
+        text: 'Underlined text example:'
+      -
+        type: text
+        text: ' This is an example of '
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: 'underlined text'
+      -
+        type: text
+        text: ' in the lorem ipsum.'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'Strikethrough text example: This is an example of strikethrough text in the lorem ipsum.'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+          -
+            type: italic
+        text: 'Bold and italic combination:'
+      -
+        type: text
+        text: ' This is an example of '
+      -
+        type: text
+        marks:
+          -
+            type: bold
+          -
+            type: italic
+        text: 'bold and italic text'
+      -
+        type: text
+        text: ' in the lorem ipsum.'
   -
     type: blockquote
     content:
@@ -109,43 +140,12 @@ content:
         content:
           -
             type: text
-            text: 'Just a simple quote'
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: 'Be aware that underlined text in the internet usually indicates that it’s a clickable link. Don’t confuse your users with underlined text.'
-  -
-    type: bulletList
-    content:
-      -
-        type: listItem
-        content:
+            text: 'Blockquote example:'
           -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: Jesus
-      -
-        type: listItem
-        content:
+            type: hardBreak
           -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'The Apostles'
-      -
-        type: listItem
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: Jerusalem
+            type: text
+            text: '"The quick brown fox jumps over the lazy dog."'
   -
     type: orderedList
     attrs:
@@ -159,23 +159,97 @@ content:
             content:
               -
                 type: text
-                text: Mango
-      -
-        type: listItem
-        content:
+                marks:
+                  -
+                    type: bold
+                text: 'Ordered List Example:'
           -
-            type: paragraph
+            type: bulletList
             content:
               -
-                type: text
-                text: Apricot
-      -
-        type: listItem
-        content:
-          -
-            type: paragraph
-            content:
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        marks:
+                          -
+                            type: bold
+                        text: 'Item 1:'
+                      -
+                        type: text
+                        text: ' This is a bolded item.'
               -
-                type: text
-                text: Peach
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        marks:
+                          -
+                            type: italic
+                        text: 'Item 2:'
+                      -
+                        type: text
+                        text: ' This is an italicized item.'
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Item 3: This is a strikethrough item.'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: "Hope this is what you're looking for! Let me know if you need it customized further. 😊"
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'The states had asked Chutkan to temporarily prohibit Musk and DOGE from accessing government information systems at the Office of Personnel Management, the Department of Education, the Department of Labor, the Department of Health and Human Services, the Department of Energy, the Department of Transportation, and the Department of Commerce.'
+  -
+    type: paragraph
+    content:
+      -
+        type: image
+        attrs:
+          src: 'asset::assets::pages/ryan-klaus-xa0bloxvxrq-unsplash(1).jpg'
+          alt: null
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'They also wanted the judge to block Musk and DOGE from firing or placing on involuntary leave any employees at those agencies.'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'But Chutkan said that the states hadn’t shown “that they will suffer imminent, irreparable harm absent a temporary restraining order.”'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: '“The court is aware that DOGE’s unpredictable actions have resulted in considerable uncertainty and confusion for Plaintiffs and many of their agencies and residents,” she wrote in the 10-page ruling. “It remains ‘uncertain’ when and how the catalog of state programs that Plaintiffs identify will suffer.”'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        marks:
+          -
+            type: italic
+        text: 'This story is breaking and will be updated.'
 ---

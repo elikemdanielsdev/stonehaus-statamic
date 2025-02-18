@@ -3,17 +3,19 @@ import MessageSet from "./Sets/MessageSet";
 import AnnouncementSet from "./Sets/AnnouncementSet";
 import InfoSet from "./Sets/InfoSet";
 
-const IMAGE_BASE_URL = "https://stonehaus-statamic.test/assets/";
+// const IMAGE_BASE_URL = "https://stonehaus-statamic.test/assets/";
+const SITE_URL = import.meta.env.VITE_SITE_URL;
+
 
 const transformContent = (content) => {
   if (!Array.isArray(content)) return [];
 
   return content.map((node) => {
     if (node.type === "image" && node.attrs?.src) {
-      node.attrs.src = node.attrs.src.replace("asset::assets::", IMAGE_BASE_URL);
+      node.attrs.src = node.attrs.src.replace("asset::assets::", SITE_URL);
     }
     if (node.type === "paragraph" && node.content?.length === 1 && node.content[0].type === "image") {
-      node.content[0].attrs.src = node.content[0].attrs.src.replace("asset::assets::", IMAGE_BASE_URL);
+      node.content[0].attrs.src = node.content[0].attrs.src.replace("asset::assets::", SITE_URL);
       return node.content[0];
     }
     return node;
