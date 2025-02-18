@@ -1,0 +1,103 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              remove_empty_nodes: true
+              type: bard
+              display: Content
+              container: assets
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - quote
+                - anchor
+                - image
+                - code
+              collapse: accordion
+              target_blank: true
+              sets:
+                common:
+                  display: Common
+                  icon: align-object-bottom
+                  sets:
+                    message:
+                      display: Message
+                      icon: share-mega-phone
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            type: text
+                            display: Title
+                        -
+                          handle: content
+                          field:
+                            type: textarea
+                            display: Content
+                    announcement:
+                      display: Announcement
+                      icon: alert-alarm-bell
+                      fields:
+                        -
+                          handle: content
+                          field:
+                            type: textarea
+                            display: Content
+                    info:
+                      display: Info
+                      icon: alert-warning-exclamation-mark
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            type: text
+                            display: Title
+                        -
+                          handle: content
+                          field:
+                            type: textarea
+                            display: Content
+                        -
+                          handle: image
+                          field:
+                            max_files: 1
+                            container: assets
+                            type: assets
+                            display: Image
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
