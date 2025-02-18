@@ -4,14 +4,47 @@ blueprint: pages
 title: Home
 template: home
 updated_by: 79d6af5a-902a-414e-a900-fe751ede6345
-updated_at: 1739921022
+updated_at: 1739922202
 content:
   -
     type: paragraph
     content:
       -
         type: text
-        text: 'A federal judge declined on Tuesday to temporarily block Elon Musk and his Department of Government Efficiency from accessing federal data systems at a slew of executive branch agencies.'
+        text: 'A federal judge declined on Tuesday to temporarily block Elon Musk and his Department of Government Efficiency from accessing federal data systems at a slew of executive branch '
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: agencies
+      -
+        type: text
+        text: .
+  -
+    type: set
+    attrs:
+      id: m7b4qpc0
+      values:
+        type: announcement
+        kind: warning
+        content: 'Take this as a warning.'
+  -
+    type: set
+    attrs:
+      id: m7b4o0is
+      values:
+        type: announcement
+        kind: info
+        content: 'Is this working??'
+  -
+    type: set
+    attrs:
+      id: m7b4p0tf
+      values:
+        type: announcement
+        kind: success
+        content: Congratulations!
   -
     type: paragraph
     content:

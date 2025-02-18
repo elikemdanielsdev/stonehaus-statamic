@@ -17,7 +17,7 @@ class HomeController extends Controller
             ->first();
 
         //  Pass data to view.
-        return Inertia::render('Index', [
+        return Inertia::render('Home', [
             'page' => [
                 'title' => $page->get('title'),
                 'content' => $page->get('content'),

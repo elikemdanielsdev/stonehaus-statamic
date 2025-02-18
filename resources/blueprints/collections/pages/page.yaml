@@ -56,6 +56,21 @@ tabs:
                       icon: alert-alarm-bell
                       fields:
                         -
+                          handle: kind
+                          field:
+                            options:
+                              -
+                                key: info
+                                value: Info
+                              -
+                                key: warning
+                                value: Warning
+                              -
+                                key: success
+                                value: Success
+                            type: select
+                            display: Kind
+                        -
                           handle: content
                           field:
                             type: textarea
