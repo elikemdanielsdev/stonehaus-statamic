@@ -14,17 +14,17 @@ return [
     |
     */
 
-    'enabled' => env('STATAMIC_GRAPHQL_ENABLED', false),
+    'enabled' => env('STATAMIC_GRAPHQL_ENABLED', true),
 
     'resources' => [
-        'collections' => false,
-        'navs' => false,
-        'taxonomies' => false,
-        'assets' => false,
-        'globals' => false,
-        'forms' => false,
-        'sites' => false,
-        'users' => false,
+        'collections' => true,
+        'navs' => true,
+        'taxonomies' => true,
+        'assets' => true,
+        'globals' => true,
+        'forms' => true,
+        'sites' => true,
+        'users' => true,
     ],
 
     /*

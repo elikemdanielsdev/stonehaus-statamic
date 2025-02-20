@@ -10,7 +10,15 @@ export default {
     ],
 
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                forest: '#113A3C',
+                lime: '#BFEF90',
+                jade: '#3DB682',
+                amber: '#FEB434',
+                celadon: '#E7F8E4',
+            },
+        },
     },
 
     plugins: [

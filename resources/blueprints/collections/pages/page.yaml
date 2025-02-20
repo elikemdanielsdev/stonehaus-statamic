@@ -96,6 +96,23 @@ tabs:
                             container: assets
                             type: assets
                             display: Image
+                    video:
+                      display: Video
+                      icon: media-webcam-video
+                      fields:
+                        -
+                          handle: src
+                          field:
+                            type: text
+                            display: Source
+  seo_settings:
+    display: 'SEO Settings'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            import: seo
   sidebar:
     display: Sidebar
     sections:

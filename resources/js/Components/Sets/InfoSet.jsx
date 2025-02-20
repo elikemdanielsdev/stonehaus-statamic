@@ -1,6 +1,5 @@
 import React from 'react'
-
-const SITE_URL = import.meta.env.VITE_SITE_URL;
+import { SITE_URL } from '@/utils';
 
 export default function InfoSet({ title, content, image }) {
   return (

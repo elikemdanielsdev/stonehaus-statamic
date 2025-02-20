@@ -1,12 +1,11 @@
 import React from "react";
-import MessageSet from "./Sets/MessageSet";
-import AnnouncementSet from "./Sets/AnnouncementSet";
-import InfoSet from "./Sets/InfoSet";
+import { SITE_URL } from '@/utils';
+import MessageSet from "@/Components/Sets/MessageSet";
+import AnnouncementSet from "@/Components/Sets/AnnouncementSet";
+import InfoSet from "@/Components/Sets/InfoSet";
+import VideoSet from "@/Components/Sets/VideoSet";
 
-// const IMAGE_BASE_URL = "https://stonehaus-statamic.test/assets/";
-const SITE_URL = import.meta.env.VITE_SITE_URL;
-
-
+// Content transformation
 const transformContent = (content) => {
   if (!Array.isArray(content)) return [];
 
@@ -22,7 +21,8 @@ const transformContent = (content) => {
   });
 };
 
-const BardRenderer = ({ content }) => {
+// Bard content renderer
+export default function BardRenderer({ content }) {
   if (!content) return null;
 
   const transformedContent = transformContent(content);
@@ -33,6 +33,26 @@ const BardRenderer = ({ content }) => {
     switch (node.type) {
       case "paragraph":
         return <p key={index}>{node.content?.map(renderNode)}</p>;
+
+      case "heading": {
+        const level = node.attrs.level;
+        switch (level) {
+          case 1:
+            return <h1 key={index}>{node.content?.map(renderNode)}</h1>;
+          case 2:
+            return <h2 key={index}>{node.content?.map(renderNode)}</h2>;
+          case 3:
+            return <h3 key={index}>{node.content?.map(renderNode)}</h3>;
+          case 4:
+            return <h4 key={index}>{node.content?.map(renderNode)}</h4>;
+          case 5:
+            return <h5 key={index}>{node.content?.map(renderNode)}</h5>;
+          case 6:
+            return <h6 key={index}>{node.content?.map(renderNode)}</h6>;
+          default:
+            return null; // Or perhaps a default heading (e.g., h3) or an error.
+        }
+      }
 
       case "text":
         let text = node.text;
@@ -84,6 +104,8 @@ const BardRenderer = ({ content }) => {
             return <AnnouncementSet key={index} {...values} />;
           case "info":
             return <InfoSet key={index} {...values} />;
+          case "video":
+            return <VideoSet key={index} {...values} />;
           default:
             return null;
         }
@@ -95,5 +117,3 @@ const BardRenderer = ({ content }) => {
 
   return <div className="prose max-w-none">{transformedContent.map(renderNode)}</div>;
 };
-
-export default BardRenderer;
