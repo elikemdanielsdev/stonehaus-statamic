@@ -1,0 +1,76 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+      -
+        fields:
+          -
+            handle: page_builder
+            field:
+              type: replicator
+              display: 'Page Builder'
+              collapse: true
+              button_label: 'Add a block'
+              sets:
+                common_blocks:
+                  display: 'Common Blocks'
+                  icon: addon-boxes-stack
+                  sets:
+                    hero_block:
+                      display: 'Hero Block'
+                      icon: align-object-top
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            type: text
+                            display: Title
+                        -
+                          handle: subtitle
+                          field:
+                            type: text
+                            display: Subtitle
+                    faq_block:
+                      display: 'FAQ Block'
+                      icon: alert-help-question
+                      fields:
+                        -
+                          handle: question
+                          field:
+                            type: text
+                            display: Question
+                        -
+                          handle: answer
+                          field:
+                            type: text
+                            display: Answer
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

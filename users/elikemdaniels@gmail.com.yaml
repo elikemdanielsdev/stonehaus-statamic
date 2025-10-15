@@ -1,0 +1,6 @@
+name: 'Elikem Daniels'
+super: true
+id: b9606f12-f9b8-4048-8a31-e64b6ac2dc74
+password_hash: $2y$12$QU0oA0FQWXtnn0wFosffQesz9miNfTAFz8.lgM9F9M/StAMrNcktm
+preferences:
+  theme: light
